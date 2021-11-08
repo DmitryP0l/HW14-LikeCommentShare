@@ -10,8 +10,9 @@ import UIKit
 protocol TableViewCellDelegate: AnyObject {
     func likeAction(photoName: String)
     func dislikeAction(photoName: String)
-    func commentAction(photoName: String, labelText: String)
-    func shareAction(photoName: String)
+    func commentAction(photoName: String)
+    //func commentAction(photoName: String, labelText: String)
+    func shareAction()
     func bookmarkAction(photoName: String)
 }
 
@@ -87,15 +88,15 @@ extension TableViewCell {
     }
     
     @IBAction func commentButtonAction(_ sender: UIButton) {
-        delegate?.commentAction(photoName: namePhoto, labelText: commentLabel.text ?? "err")
+        delegate?.commentAction(photoName: namePhoto)
     }
    
     @IBAction func shareButtonAction(_ sender: UIButton) {
-        delegate?.shareAction(photoName: namePhoto)
+        
     }
     
     @IBAction func bookmarkButtonAction(_ sender: UIButton) {
-       // надо прикрутить сюда тогл
+       // нe забыть прикрутить сюда тогл
         delegate?.bookmarkAction(photoName: namePhoto)
     }
     
@@ -103,11 +104,3 @@ extension TableViewCell {
 
 
 
-
-extension TableViewCell: ViewControllerDelegate {
-    func insertTextLabel(labelText: String) {
-        commentLabel.text = labelText
-    }
-    
-    
-}

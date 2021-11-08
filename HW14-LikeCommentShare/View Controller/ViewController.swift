@@ -10,10 +10,10 @@ import UIKit
 
 
 
-protocol ViewControllerDelegate: AnyObject {
-    func insertTextLabel(labelText: String)
-    
-}
+//protocol ViewControllerDelegate: AnyObject {
+//    func insertTextLabel(labelText: String)
+//
+//}
 
 
 
@@ -43,7 +43,7 @@ class ViewController: UIViewController {
 //    private var personNameComment: String = ""
 //    private var textComment: String = ""
     
-    weak var delegatik: ViewControllerDelegate?
+  //  weak var delegate: ViewControllerDelegate?
     
     
     
@@ -84,11 +84,11 @@ extension ViewController: TableViewCellDelegate {
         tableView.reloadData()
     }
     
-    func commentAction(photoName: String, labelText: String) {
+    func commentAction(photoName: String) {
         showAlert()
     }
                                        
-    func shareAction(photoName: String) {
+    func shareAction() {
     }
     
     func bookmarkAction(photoName: String) {
@@ -133,11 +133,12 @@ extension ViewController {
                       return
                   }
             
+            
+            //
             print( "\(name): \(comment)")
             
-            
-            self.delegatik?.insertTextLabel(labelText: "\(name): \(comment)")
-            self.tableView.reloadData()
+           
+           // self.tableView.reloadData()
         }))
         present(alert, animated: true)
     }
