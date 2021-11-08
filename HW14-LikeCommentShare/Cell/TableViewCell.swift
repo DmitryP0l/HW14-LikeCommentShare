@@ -22,13 +22,14 @@ final class CellModel {
     let photoName: String
     var isLiked: Bool
     var toBookmarks: Bool
+    var commentString: String?
     
-    
-    init (initImageString: String) {
+    init (initImageString: String, commentString: String? = nil) {
         photoName = initImageString
         isLiked = false
         toBookmarks = false
         photoImage = UIImage(named: initImageString)
+        self.commentString = commentString
     }
 }
 
@@ -58,7 +59,7 @@ final class TableViewCell: UITableViewCell {
         liked = model.isLiked
         bookmark = model.toBookmarks
         imageViewCell.image = model.photoImage
-        
+        commentLabel.text = model.commentString
         
         let likeButtonImage = UIImage(systemName: liked ? "heart.fill" : "heart")
         likeButton.setImage(likeButtonImage, for: .normal)

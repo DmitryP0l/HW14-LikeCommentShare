@@ -85,7 +85,7 @@ extension ViewController: TableViewCellDelegate {
     }
     
     func commentAction(photoName: String) {
-        showAlert()
+        showAlert(photoName: photoName)
     }
                                        
     func shareAction() {
@@ -98,7 +98,7 @@ extension ViewController: TableViewCellDelegate {
 // MARK: - UIAlertController
 extension ViewController {
   
-    @objc private func showAlert() {
+    @objc private func showAlert(photoName: String) {
         let alert = UIAlertController(
             title: "hello",
             message: "how are you?",
@@ -119,7 +119,7 @@ extension ViewController {
         
             //        add buttons
         alert.addAction(UIAlertAction(title: "Cancel", style: .cancel, handler: nil))
-        alert.addAction(UIAlertAction(title: "Continue", style: .default, handler: { _ in
+        alert.addAction(UIAlertAction(title: "Continue", style: .default, handler: { [weak self] _ in
             
             //        read textfield values
             guard let fields = alert.textFields, fields.count == 2 else {
@@ -135,7 +135,10 @@ extension ViewController {
             
             
             //
-            print( "\(name): \(comment)")
+            
+            self?.dataSourceArray.first(where: { $0.photoName == photoName})?.commentString = "\(name): \(comment)"
+            self?.tableView.reloadData()
+//            print( "\(name): \(comment)")
             
            
            // self.tableView.reloadData()
