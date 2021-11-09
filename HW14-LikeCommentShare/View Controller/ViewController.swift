@@ -40,11 +40,7 @@ final class ViewController: UIViewController {
         CellModel(initImageString: "img_15")
     ]
     
-//    private var personNameComment: String = ""
-//    private var textComment: String = ""
-    
-  //  weak var delegate: ViewControllerDelegate?
-    
+
     
     
     override func viewDidLoad() {
