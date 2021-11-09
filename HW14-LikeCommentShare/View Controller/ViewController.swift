@@ -125,8 +125,10 @@ extension ViewController {
             guard let fields = alert.textFields, fields.count == 2 else {
                 return
             }
+            //        insert tag textfield
             let nameFields = fields[0]
             let commentFields = fields[1]
+            //
             guard let name = nameFields.text, !name.isEmpty,
                   let comment = commentFields.text, !comment.isEmpty else {
                       print("fill in the fields")
@@ -134,14 +136,9 @@ extension ViewController {
                   }
             
             
-            //
-            
             self?.dataSourceArray.first(where: { $0.photoName == photoName})?.commentString = "\(name): \(comment)"
             self?.tableView.reloadData()
-//            print( "\(name): \(comment)")
-            
-           
-           // self.tableView.reloadData()
+
         }))
         present(alert, animated: true)
     }
