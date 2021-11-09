@@ -10,14 +10,10 @@ import UIKit
 
 
 
-//protocol ViewControllerDelegate: AnyObject {
-//    func insertTextLabel(labelText: String)
-//
-//}
-
-
 
 final class ViewController: UIViewController {
+    
+   // let tabBar = UITabBarController()
 
     @IBOutlet weak var tableView: UITableView!
     
@@ -39,17 +35,15 @@ final class ViewController: UIViewController {
         CellModel(initImageString: "img_14"),
         CellModel(initImageString: "img_15")
     ]
-    
 
-    
-    
     override func viewDidLoad() {
         super.viewDidLoad()
         tableView.register(UINib(nibName: "TableViewCell", bundle: nil), forCellReuseIdentifier: TableViewCell.identifier)
-    }
+       // tab()
+        
 }
 
-
+}
 // MARK: - UITableViewDelegate, UITableViewDataSource
 extension ViewController: UITableViewDelegate, UITableViewDataSource {
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
@@ -131,7 +125,6 @@ extension ViewController {
                       return
                   }
             
-            
             self?.dataSourceArray.first(where: { $0.photoName == photoName})?.commentString = "\(name): \(comment)"
             self?.tableView.reloadData()
 
@@ -140,5 +133,32 @@ extension ViewController {
     }
     
 }
+
+//extension ViewController {
+//
+//    func tab() {
+//        let firstVC = UIViewController()
+//        let secondVC = UIViewController()
+//
+//
+//        let item1 = UITabBarItem(tabBarSystemItem:.favorites, tag: 0)
+//        let item2 = UITabBarItem(tabBarSystemItem:.contacts, tag: 1)
+//
+//        firstVC.tabBarItem = item1
+//        secondVC.tabBarItem = item2
+//
+//        tabBar.viewControllers = [firstVC, secondVC]
+//        self.view.addSubview(tabBar.view)
+//    }
+//
+//
+//
+//}
+//
+
+
+
+
+
 
 

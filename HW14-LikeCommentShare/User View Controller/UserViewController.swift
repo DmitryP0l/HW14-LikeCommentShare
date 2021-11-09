@@ -7,7 +7,7 @@
 
 import UIKit
 
-class UserViewController: UITabBarItem {
+class UserViewController: UIViewController {
 
     
     @IBOutlet weak var imageViewProfile: UIImageView!
@@ -21,8 +21,9 @@ class UserViewController: UITabBarItem {
     @IBAction func logoutProfileButton(_ sender: UIButton) {
     }
     
-
- 
-
+    override func viewDidLoad() {
+        super.viewDidLoad()
+    }
+    
 
 }

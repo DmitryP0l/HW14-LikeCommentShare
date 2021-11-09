@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		B43F2907273A7A37001B06B7 /* TabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B43F2906273A7A37001B06B7 /* TabBarController.swift */; };
 		B460E5C427347A1B003450DB /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B460E5C327347A1B003450DB /* AppDelegate.swift */; };
 		B460E5C627347A1B003450DB /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B460E5C527347A1B003450DB /* SceneDelegate.swift */; };
 		B460E5C827347A1B003450DB /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B460E5C727347A1B003450DB /* ViewController.swift */; };
@@ -22,6 +23,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		B43F2906273A7A37001B06B7 /* TabBarController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBarController.swift; sourceTree = "<group>"; };
 		B460E5C027347A1B003450DB /* HW14-LikeCommentShare.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "HW14-LikeCommentShare.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		B460E5C327347A1B003450DB /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		B460E5C527347A1B003450DB /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -75,6 +77,7 @@
 				B460E5D727347A2B003450DB /* Support */,
 				B460E5CC27347A1E003450DB /* Assets.xcassets */,
 				B460E5D127347A1E003450DB /* Info.plist */,
+				B43F2906273A7A37001B06B7 /* TabBarController.swift */,
 			);
 			path = "HW14-LikeCommentShare";
 			sourceTree = "<group>";
@@ -203,6 +206,7 @@
 				B4ABD029273A665A0007AA6B /* UserViewController.swift in Sources */,
 				B460E5DC27348347003450DB /* TableViewCell.swift in Sources */,
 				B460E5C427347A1B003450DB /* AppDelegate.swift in Sources */,
+				B43F2907273A7A37001B06B7 /* TabBarController.swift in Sources */,
 				B4ABD025273A64EA0007AA6B /* LoginViewController.swift in Sources */,
 				B460E5C627347A1B003450DB /* SceneDelegate.swift in Sources */,
 			);

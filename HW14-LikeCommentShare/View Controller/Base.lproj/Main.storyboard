@@ -17,32 +17,20 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="BWB-7M-mLm">
-                                <rect key="frame" x="0.0" y="44" width="414" height="768"/>
+                                <rect key="frame" x="0.0" y="44" width="414" height="668"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                 <connections>
                                     <outlet property="dataSource" destination="BYZ-38-t0r" id="knb-I9-y3M"/>
                                     <outlet property="delegate" destination="BYZ-38-t0r" id="c69-NJ-8dP"/>
                                 </connections>
                             </tableView>
-                            <tabBar contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="4kH-2d-Y1e">
-                                <rect key="frame" x="0.0" y="812" width="414" height="50"/>
-                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                <items>
-                                    <tabBarItem systemItem="favorites" id="bR6-VV-xez"/>
-                                    <tabBarItem systemItem="more" id="awT-5I-6If" customClass="UserViewController" customModule="HW14_LikeCommentShare" customModuleProvider="target"/>
-                                </items>
-                            </tabBar>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
-                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="BWB-7M-mLm" secondAttribute="bottom" constant="50" id="8rG-Gv-Zyj"/>
-                            <constraint firstItem="4kH-2d-Y1e" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="E0z-65-aiK"/>
-                            <constraint firstItem="4kH-2d-Y1e" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="L18-Xj-Z4w"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="BWB-7M-mLm" secondAttribute="bottom" constant="150" id="8rG-Gv-Zyj"/>
                             <constraint firstItem="BWB-7M-mLm" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="Otm-04-Ujv"/>
-                            <constraint firstItem="4kH-2d-Y1e" firstAttribute="top" secondItem="BWB-7M-mLm" secondAttribute="bottom" id="ZXu-qS-2n3"/>
                             <constraint firstItem="BWB-7M-mLm" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="rH8-Fy-nlb"/>
-                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="4kH-2d-Y1e" secondAttribute="bottom" id="tkT-JP-nu8"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="BWB-7M-mLm" secondAttribute="trailing" id="udx-8Q-Oqj"/>
                         </constraints>
                     </view>

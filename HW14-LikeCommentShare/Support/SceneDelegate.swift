@@ -17,19 +17,19 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
         // UserDefaults
         // хранилище данных, сохранять настройки
         // проверка настроек, юсер залогинен или нет
-        UserDefaults.standard.set(true, forKey: UserDefaults.authKey)
+        //UserDefaults.standard.set(true, forKey: UserDefaults.authKey)
         
         // достаем значение  статуса логина
         // так себе способ
         //guard let _ = (scene as? UIWindowScene) else { return }
         // лучше так
-        UserDefaults.isLoggedIn
+        //UserDefaults.isLoggedIn
         
         
        // настройки по приоритету контроллера
-        let secondViewController = ViewController()
-        window?.rootViewController = secondViewController
-        window?.makeKeyAndVisible()
+       // let secondViewController = ViewController()
+       // window?.rootViewController = secondViewController
+       // window?.makeKeyAndVisible()
         
         
         
@@ -68,18 +68,18 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
 }
 
 
-
-extension UserDefaults {
-    static let authKey = "isLoggedIn"
-    
-    static var isLoggedIn: Bool {
-        if let value = UserDefaults.standard.value(forKey: UserDefaults.authKey) as? Bool {
-            return value
-        } else {
-            return false
-        }
-    }
-    
-    
-    
-}
+//
+//extension UserDefaults {
+//    static let authKey = "isLoggedIn"
+//    
+//    static var isLoggedIn: Bool {
+//        if let value = UserDefaults.standard.value(forKey: UserDefaults.authKey) as? Bool {
+//            return value
+//        } else {
+//            return false
+//        }
+//    }
+//    
+//    
+//    
+//}

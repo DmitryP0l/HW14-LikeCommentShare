@@ -15,8 +15,7 @@ class LoginViewController: UIViewController {
     @IBAction func enterButton(_ sender: UIButton) {
     }
     
-    
-    
+
     override func viewDidLoad() {
         super.viewDidLoad()
         
