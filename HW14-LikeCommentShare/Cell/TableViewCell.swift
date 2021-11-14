@@ -78,7 +78,6 @@ final class TableViewCell: UITableViewCell {
 
 // MARK: - Buttons Actions
 extension TableViewCell {
-  
     
     @IBAction func likeButtonAction(_ sender: UIButton) {
         if liked == true {

@@ -17,23 +17,18 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
         // UserDefaults
         // хранилище данных, сохранять настройки
         // проверка настроек, юсер залогинен или нет
-        //UserDefaults.standard.set(true, forKey: UserDefaults.authKey)
         
         // достаем значение  статуса логина
         // так себе способ
-        //guard let _ = (scene as? UIWindowScene) else { return }
+        guard let _ = (scene as? UIWindowScene) else { return }
         // лучше так
-        //UserDefaults.isLoggedIn
         
-        
+        // чтобы почистить данные в памяти
+//        UserDefaults.standard.removeObject(forKey: "isLoggedIn")
+        let tabbar = TabBarController()
+        window?.rootViewController = UserDefaults.isLoggedIn ? tabbar : LoginViewController()
+        window?.makeKeyAndVisible()
        // настройки по приоритету контроллера
-       // let secondViewController = ViewController()
-       // window?.rootViewController = secondViewController
-       // window?.makeKeyAndVisible()
-        
-        
-        
-        
     }
 
     func sceneDidDisconnect(_ scene: UIScene) {
@@ -69,17 +64,17 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
 
 
 //
-//extension UserDefaults {
-//    static let authKey = "isLoggedIn"
-//    
-//    static var isLoggedIn: Bool {
-//        if let value = UserDefaults.standard.value(forKey: UserDefaults.authKey) as? Bool {
-//            return value
-//        } else {
-//            return false
-//        }
-//    }
-//    
-//    
-//    
-//}
+extension UserDefaults {
+    static let authKey = "isLoggedIn"
+    
+    static var isLoggedIn: Bool {
+        guard let isLoggedIn = UserDefaults.standard.value(forKey: UserDefaults.authKey) as? Bool else {
+            return false
+        }
+        return isLoggedIn
+    }
+    
+    func logout() {
+        self.set(false, forKey: UserDefaults.authKey)
+    }
+}

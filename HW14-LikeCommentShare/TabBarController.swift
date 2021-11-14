@@ -10,14 +10,13 @@ final class TabBarController: UITabBarController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-       
         let tabbarVC = UITabBarController()
         tabbarVC.tabBar.backgroundColor = .green
-        let vc1 = ViewController()
+        let vc1 = HomeWorkVC()
         let vc2 = UserViewController()
 
-        vc1.title = "1"
-        vc2.title = "2"
+        vc1.title = "HOME"
+        vc2.title = "PROFILE"
 
         self.setViewControllers([vc1, vc2], animated: false)
          
